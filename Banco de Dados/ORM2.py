@@ -23,4 +23,5 @@ y = Pessoas(nome='Fabio',
 
 #session.add(x) # Adiciona o objeto à sessão
 session.add_all([x, y]) # Adiciona todos os objetos à sessão
+session.rollback() # Desfaz as alterações na sessão
 session.commit() # Salva as alterações no banco de dados

@@ -121,3 +121,7 @@ Estamos criando um ORM2.py para trabalhar algumas inerções na tabela que criam
 pois podemos criar ORMs diferente para objetivos diferentes, no caso o primeiro deixamos para
 criação de tabelas e agora começamos a colocar usuários dentro do nosso banco na primeira tabale uhuuuw
 
+3 - Limpando Session
+Agora chegou o momento de aprender a limpar os dados colocados no Session.
+fazendo o comando session.rollback() Desfaz as alterações na sessão
+e logo depois o session.commit() e assim ele vai excluir os dados
