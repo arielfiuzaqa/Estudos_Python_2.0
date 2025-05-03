@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import create_engine,
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -31,6 +31,8 @@ class Pessoas(Base):
     nome = Column(String(50), nullable=False)
     usuario = Column(String(20), nullable=False)
     senha = Column(String(10), nullable=False)
+
+# Aqui poderia criar várias tabelas, mas como o foco é só um exemplo, vamos deixar assim mesmo.
 
 # Cria a tabela no banco (caso não exista)
 Base.metadata.create_all(engine)
