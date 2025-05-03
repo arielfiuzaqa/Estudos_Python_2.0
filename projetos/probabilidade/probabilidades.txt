@@ -1,0 +1,117 @@
+Mega-Sena
+
+Quantidade de números disponíveis: 60 números no volante.
+Quantidade de números a serem escolhidos: 6 números para uma aposta simples.
+Probabilidade de acertar os 6 números (prêmio máximo): 1 em 50.063.860 para uma aposta simples de 6 dezenas.
+Apostas com mais números: É possível apostar até 15 números, aumentando as chances, por exemplo, com 15 números a chance sobe para 1 em 10.003.
+Valor da aposta simples: R$ 5.
+Sorteios: Geralmente três vezes por semana (terça, quinta e sábado).
+
+
+
+Lotofácil
+
+Quantidade de números disponíveis: 25 números no volante.
+Quantidade de números a serem escolhidos: Entre 15 e 20 números.
+Probabilidade de acertar os 15 números (faixa principal): Varia conforme a 
+quantidade de números jogados:
+
+Com 15 números: 1 em 3.268.760.
+Com 16 números: 1 em 204.298.
+Com 17 números: 1 em 24.035.
+Com 18 números: 1 em 4.006.
+Com 19 números: 1 em 843.
+Com 20 números: 1 em 211.
+
+Valor da aposta: Varia conforme a quantidade de números escolhidos, por exemplo:
+15 números: R$ 3.
+20 números: R$ 46.512.
+
+Premiação: Também há prêmios para quem acerta 11, 12, 13 ou 14 números, 
+com divisão percentual do prêmio principal entre os acertadores dos 14 e 15 números.
+
+4 acertos receberam cerca de R$ 943 cada, e prêmios menores foram pagos para 13, 12 e 11 
+acertos, respectivamente R$ 30, R$ 12 e R$ 6 por aposta
+
+OBS:
+Com base nos últimos 2000 resultados da Lotofácil, a frequência com que cada número 
+foi sorteado varia, mas a média geral de vezes que uma dezena aparece é em torno de 60%. 
+Abaixo está a lista aproximada da frequência de cada número, expressa em quantidade de 
+vezes sorteadas e em porcentagem aproximada considerando cerca de 3375 concursos 
+(para referência, 2000 resultados representam uma amostra significativa dentro desse total):
+
+Número	Vezes Sorteado	Porcentagem Aproximada (%)
+20	    2122	        62.8%
+10	    2113	        62.6%
+25	    2094	        62.0%
+11	    2075	        61.5%
+13	    2056	        60.9%
+24	    2055	        60.9%
+14	    2052	        60.8%
+1	    2038	        60.4%
+4	    2036	        60.4%
+3	    2035	        60.3%
+5	    2031	        60.2%
+12	    2026	        60.0%
+2	    2022	        59.9%
+22	    2021	        59.9%
+9	    2019	        59.8%
+18	    2019	        59.8%
+19	    2012	        59.6%
+15	    2003	        59.4%
+21	    2002	        59.4%
+7	    1987	        58.9%
+17	    1982	        58.8%
+6	    1973	        58.5%
+23	    1973	        58.5%
+8	    1964	        58.3%
+16	    1930	        57.3%        
+
+
+####################################### Primeiro Codigo ####################################
+import random
+
+# Probabilidades aproximadas (em %), baseadas nos dados fornecidos
+# Essas porcentagens podem ser ajustadas conforme dados mais precisos
+numero_probabilidades = {
+    1: 60.4, 2: 59.9, 3: 60.3, 4: 60.4, 5: 60.2,
+    6: 58.5, 7: 58.9, 8: 58.3, 9: 59.8, 10: 62.6,
+    11: 61.5, 12: 60.0, 13: 60.9, 14: 60.8, 15: 59.4,
+    16: 57.3, 17: 58.8, 18: 59.8, 19: 59.6, 20: 62.8,
+    21: 59.4, 22: 59.9, 23: 58.5, 24: 60.9, 25: 62.0
+}
+
+# Normalizar as probabilidades para que a soma seja 1
+total_prob = sum(numero_probabilidades.values())
+pesos_normalizados = {num: prob / total_prob for num, prob in numero_probabilidades.items()}
+
+def gerar_jogo(pesos, qtd_numeros=15):
+    numeros = list(pesos.keys())
+    pesos_lista = [pesos[num] for num in numeros]
+    
+    # Escolher 15 números sem repetição, ponderados pelos pesos
+    jogo = random.choices(numeros, weights=pesos_lista, k=qtd_numeros*3)  # Escolhe mais para evitar repetições
+    jogo_unico = []
+    for num in jogo:
+        if num not in jogo_unico:
+            jogo_unico.append(num)
+        if len(jogo_unico) == qtd_numeros:
+            break
+    return sorted(jogo_unico)
+
+def gerar_varios_jogos(qtd_jogos=5):
+    jogos = []
+    for _ in range(qtd_jogos):
+        jogo = gerar_jogo(pesos_normalizados)
+        jogos.append(jogo)
+    return jogos
+
+if __name__ == "__main__":
+    jogos_gerados = gerar_varios_jogos()
+    for i, jogo in enumerate(jogos_gerados, 1):
+        print(f"Jogo {i}: {jogo}")
+
+
+
+########################################### CODIGO COMPLETO LOTOFACIL ############################################
+

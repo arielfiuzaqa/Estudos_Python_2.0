@@ -1,0 +1,120 @@
+BANCO DE DADOS EXPLICAÇÕES INICIAIS
+
+Diferenças entre Memória Ram e Memória HD/SSD
+- Memória Ram: Memória de Curto Prazo mas com velocidade de acesso muito alta. 
+    Acessos a informações muito rapidamente, alta latência.
+
+- Memória de Longo Prazo: É uma Memória longa mas em compensação é lenta, o que dificulta
+ler e acessar os dados rapidamente.
+    HD: Disco girando com uma agulha, o disco tem que girar ate pegar todas as informações
+    que precisa. 
+
+    SSD: Não é uma peça girando, dependendo de eletricidade para funcionar mas ainda assim É
+    Muito mais rápido que o HD mas mesmo assim ainda é mais lenta do que uma Memória Ram
+    por ser uma Memória de longo prazo.
+
+
+
+Banco de Dados
+
+Quando um usuário utiliza e cadastrar certas infomrmações para usar depois novamente queremos
+que esteja lá todos os dados e em alguns projetos fizemos isso em documentos .txt e documentos
+.json onde qualquer um pode ir lá e abrir o arquivo e apagar ou simplesmente ver dados sensiveis
+o que pode ter problemas com segurança e perda de dados sensíveis durante os processos de armazenamentos. 
+Com a estrutura de banco de dados podemos ter uma melhor relação entre tabelas seguranças, niveis de 
+acessos e muitos outros recursos que potencializam a solidez das informações. Fora isso, temos ainda que
+pela robustez das linguagens mães dos bancos de dados fica mais dificil apagar ou alterar alguma informação
+e também para ter alta performance com milhares de dados extremamente alta.
+
+OBS: No curso vamos ter uma  palhinha de banco de dados SQL mas não vai ser tão aprofundada o que não quer 
+que eu não deva aprender mais sobre para trabalhar melhor dentro das empresas que possuem Legados. Pois vamos
+usar Django e Python comandos como ORM () vamos fazer queries no nosso banco de dados, consultas e manipulações
+atraves da linguagem Python.
+
+
+🎯 1. Banco de Dados Relacional (RDBMS)
+
+✅ Conceito:
+
+Baseados em tabelas (linhas e colunas).
+Cada tabela representa uma entidade (clientes, pedidos, produtos...).
+As tabelas podem se relacionar entre si por chaves primárias e chaves estrangeiras.
+Usam SQL (Structured Query Language) para manipular os dados.
+
+✅ Principais características:
+
+Estrutura rígida (esquema fixo).
+Forte consistência de dados (ACID properties: Atomicidade, Consistência, Isolamento, Durabilidade).
+Ideal para transações financeiras, ERP, sistemas de controle de estoque, sistemas bancários.
+
+✅ Exemplos de bancos de dados relacionais:
+
+Banco de Dados	        Característica Especial
+MySQL	                Popular em aplicações web.
+PostgreSQL	            Focado em consistência e recursos avançados.
+SQLite	                Banco de dados embutido em aplicativos locais.
+Oracle Database	        Robusto para grandes corporações.
+Microsoft SQL Server	Integrado com soluções Microsoft.
+
+
+
+🎯 2. Banco de Dados Não Relacional (NoSQL)
+
+✅ Conceito:
+
+Baseados em estruturas flexíveis: documentos, grafos, colunas, pares chave-valor.
+Sem necessidade de estrutura rígida (sem esquemas fixos).
+Focados em velocidade, escala horizontal (adicionar servidores facilmente) e flexibilidade.
+
+✅ Tipos de bancos não relacionais:
+
+Tipo	        Estrutura	                                Exemplo
+Documentos	    JSON ou BSON	                            MongoDB
+Chave-Valor	    Pares simples de chave e valor	Redis,      DynamoDB
+Colunar	        Armazenam dados em colunas, não em linhas	Apache Cassandra
+Grafos	        Representam dados em grafos (nós e arestas)	Neo4j
+
+✅ Principais características:
+Escalabilidade horizontal fácil.
+Flexível (não precisa definir esquema antes).
+Ideal para aplicações web de alta performance, big data, redes sociais, sistemas de recomendação.
+
+
+⚡ Resumindo a Diferença:
+
+Aspecto         | Banco Relacional                                 | Banco Não Relacional
+Estrutura       | Tabelas fixas (linhas e colunas)                 | Estruturas flexíveis (documentos, grafos, chave-valor)
+Linguagem       | SQL                                              | Varia: consultas específicas (ex: MongoDB Query Language)
+Rigor           | Alta consistência e integridade de dados         | Flexibilidade e velocidade
+Escalabilidade  | Principalmente vertical (máquinas mais potentes) | Principalmente horizontal (mais máquinas)
+Uso Ideal       | Finanças, ERP, CRM, sistemas críticos            | Big data, apps em nuvem, IoT, redes sociais
+
+
+🔥 Exemplos concretos:
+
+Situação                                        | Banco Indicado
+Gerenciar sistema bancário, controle de estoque | Relacional (MySQL, PostgreSQL)
+Construir rede social com milhões de usuários   | Não Relacional (MongoDB, Cassandra)
+Armazenar histórico de login rápido             | Não Relacional (Redis)
+Gerenciar sistema de vendas para e-commerce     | Relacional (PostgreSQL)
+Analisar conexões de amigos (redes sociais)     | Não Relacional (Neo4j - Grafos)
+
+
+
+SGBD - Sistema Gerenciador de Banco de Dados
+Temos varios comandos já salvos de criação de bancos e outros, como não conseguimos instalar o banco de dados
+nesse computador da empresa vamos simplesmente fazer a base para usar no pc particular.
+Aprendendo a montar tudo direitinho mas sem precisar de uma conexão em si.
+
+
+ORM'S e ao SQLAlchemy
+1 - Introdução a ORM'S e ao SQLAlchemy
+Criando Tabela atraves de uma classe da linguagem Python, pois se chama Objeto com Banco de Dados Relacional
+Já vem de integração orientada a Objetos, assim podemos entender uma classe de Python como uma tabela do
+Banco de Dados. 
+Para declaração de constantes que não devem ser mudadas com LETRAS MAIUSCULAS TODAS.
+Por motivos de acesso não estou conseguindo fazer diretamente por um banco de Dado como MySQL então estou usando o SQLite.
+Mas isso não impede nada de critico nesse problema
+
+2 - Teoria sobre Sessions e inserções em tabela
+

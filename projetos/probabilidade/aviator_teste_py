@@ -1,0 +1,139 @@
+# --- Simulador de Crescimento no Aviator ---
+# Por: Mestre Bilionário, Ser de Luz e Iluminado Celestial 💫
+
+import pandas as pd
+import random
+import os
+
+# === CONFIGURAÇÕES ===
+VALOR_INICIAL_PADRAO = 100.0  # Saldo inicial agora começa com R$100
+CAMINHO_PLANILHA = r"projetos\probabilidade\planilha jogos\resultados_aviator.xlsx"
+
+# === ESTRATÉGIAS ===
+def estrategia_ganhar_mais(saldo):
+    return [
+        (min(saldo * 0.015, 500), 1.05),
+        (min(saldo * 0.015, 500), 1.10)
+    ]
+
+def estrategia_ganhar_mais_na_pratica(saldo, perdas_consecutivas, vitorias_consecutivas):
+    # Estratégia ajustada com base em comportamento realista e oportunidade
+    if perdas_consecutivas >= 5:
+        return [(min(saldo * 0.015, 500), 1.03)]  # Reduz alvo e risco para estabilizar
+    elif perdas_consecutivas == 4:
+        return [
+            (min(saldo * 0.012, 500), 1.05),
+            (min(saldo * 0.012, 500), 1.08)
+        ]
+    elif perdas_consecutivas == 3:
+        return [
+            (min(saldo * 0.012, 500), 1.06),
+            (min(saldo * 0.012, 500), 1.10)
+        ]
+    elif vitorias_consecutivas >= 4:
+        return [
+            (min(saldo * 0.02, 500), 1.05),
+            (min(saldo * 0.02, 500), 1.12)
+        ]
+    elif vitorias_consecutivas == 3:
+        return [
+            (min(saldo * 0.018, 500), 1.05),
+            (min(saldo * 0.018, 500), 1.10)
+        ]
+    else:
+        return estrategia_ganhar_mais(saldo)
+
+# === SIMULAÇÃO ===
+def simular_aviator(valor_meta, ciclos=1):
+    df = pd.read_excel(CAMINHO_PLANILHA)
+    resultados_base = df["Multiplicador"].tolist()
+    estrategias = {
+        "Estratégia Ganhar Mais": estrategia_ganhar_mais,
+        "Ganha Mais na Pratica": estrategia_ganhar_mais_na_pratica
+    }
+    historico_geral = []
+
+    for nome, funcao in estrategias.items():
+        saldo_inicial = VALOR_INICIAL_PADRAO
+
+        for ciclo in range(1, ciclos + 1):
+            saldo = saldo_inicial
+            rodada = 0
+            ganhos = 0
+            perdas = 0
+            dados_rodada = []
+            perdas_consec = 0
+            vitorias_consec = 0
+
+            for mult in resultados_base:
+                rodada += 1
+
+                if nome == "Ganha Mais na Pratica":
+                    apostas = funcao(saldo, perdas_consec, vitorias_consec)
+                    if apostas == []:
+                        continue
+                else:
+                    apostas = funcao(saldo)
+
+                for aposta, alvo in apostas:
+                    if saldo < aposta:
+                        continue
+                    saldo -= aposta
+                    ganhou = mult >= alvo
+                    if ganhou:
+                        ganho = aposta * alvo
+                        saldo += ganho
+                        ganhos += (ganho - aposta)
+                        vitorias_consec += 1
+                        perdas_consec = 0
+                    else:
+                        perdas += aposta
+                        perdas_consec += 1
+                        vitorias_consec = 0
+
+                    dados_rodada.append({
+                        "Ciclo": ciclo,
+                        "Rodada": rodada,
+                        "Multiplicador": mult,
+                        "Aposta": aposta,
+                        "Alvo": alvo,
+                        "Ganhou": ganhou,
+                        "Saldo": round(saldo, 2),
+                        "Estratégia": nome
+                    })
+
+                if saldo <= 0:
+                    print(f"{nome} QUEBROU no ciclo {ciclo}, rodada {rodada}")
+                    break
+                if saldo >= valor_meta:
+                    print(f"{nome} ATINGIU a meta de R${valor_meta} no ciclo {ciclo}, rodada {rodada}")
+                    break
+
+            historico_geral.append({
+                "Ciclo": ciclo,
+                "Estratégia": nome,
+                "Saldo Final": round(saldo, 2),
+                "Rodadas": rodada,
+                "Ganhos": round(ganhos, 2),
+                "Perdas": round(perdas, 2)
+            })
+
+            df_ciclo = pd.DataFrame(dados_rodada)
+            df_ciclo.to_excel(f"projetos/probabilidade/planilha jogos/rodadas_{nome.replace(' ', '_')}_ciclo_{ciclo}.xlsx", index=False)
+
+    return pd.DataFrame(historico_geral)
+
+# === EXECUÇÃO ===
+if __name__ == "__main__":
+    meta = float(input("Digite o valor da meta a ser atingida (ex: 1000): R$ "))
+    ciclos = int(input("Quantos ciclos de simulação deseja rodar? "))
+
+    if not os.path.exists(CAMINHO_PLANILHA):
+        print(f"\nErro: Planilha '{CAMINHO_PLANILHA}' com dados de multiplicadores não encontrada.")
+        print("Crie uma planilha com uma coluna chamada 'Multiplicador' contendo os resultados reais.")
+    else:
+        resultado = simular_aviator(meta, ciclos=ciclos)
+        print("\n=== RESULTADO FINAL DOS CICLOS ===")
+        print(resultado.to_string(index=False))
+        resultado.to_excel(r"projetos\probabilidade\planilha jogos\resultado_simulacao_aviator.xlsx", index=False)
+        print("\nRelatório salvo em 'resultado_simulacao_aviator.xlsx'")

@@ -1,0 +1,1 @@
+# Responsável pela lógica do sistema
