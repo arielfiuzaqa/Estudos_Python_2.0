@@ -119,4 +119,5 @@ Mas isso não impede nada de critico nesse problema
 2 - Teoria sobre Sessions e inserções em tabela
 Estamos criando um ORM2.py para trabalhar algumas inerções na tabela que criamos no ORM.py
 pois podemos criar ORMs diferente para objetivos diferentes, no caso o primeiro deixamos para
-criação de tabelas 
+criação de tabelas e agora começamos a colocar usuários dentro do nosso banco na primeira tabale uhuuuw
+
