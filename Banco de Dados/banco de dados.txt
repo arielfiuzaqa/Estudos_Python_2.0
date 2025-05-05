@@ -125,3 +125,38 @@ criação de tabelas e agora começamos a colocar usuários dentro do nosso banc
 Agora chegou o momento de aprender a limpar os dados colocados no Session.
 fazendo o comando session.rollback() Desfaz as alterações na sessão
 e logo depois o session.commit() e assim ele vai excluir os dados
+
+4 - Select
+Agora como eu trago os dados que estão no banco de dados para a linguagem Python para fazer tratamentos
+e fazer as verificações desses mesmo dados? Ou o que eu queira fazer atraves dessa linguagem Python?
+Existem algumas formas e vamos aprender a primeira delas que é:
+x1 = session.query(Pessoas) para trazer tudo de relacionado com os itens que tem dentro de Pessoas
+resp: SELECT "Pessoa".id AS "Pessoa_id", "Pessoa".nome AS "Pessoa_nome", "Pessoa".usuario AS "Pessoa_usuario", 
+"Pessoa".senha AS "Pessoa_senha" FROM "Pessoa"
+já se utilizarmos com .all() podemos trazer o que tem no nosso banco de dados no caso all que é tudo.
+x = x1.all() # Retorna todos os objetos da tabela Pessoas
+resp: [<ORM.Pessoas object at 0x0000029F30805130>, <ORM.Pessoas object at 0x0000029F30805160>, <ORM.Pessoas object at 0x0000029F30805190>, 
+<ORM.Pessoas object at 0x0000029F308051C0>, <ORM.Pessoas object at 0x0000029F308051F0>]
+E vou aprender a trabalhar com esses tipos de dados.
+
+O completo fica assim: x1 = session.query(Pessoas).all() # Retorna todos os objetos da tabela Pessoas
+Gerando novamente o mesmo processo.
+
+Gerando print(type(x[0])) vai nos mostra exatamente: <class 'ORM.Pessoas'> que é a própria class que é seu tipo
+Agora usando print(x[0].id) com o ponto trazemos qualquer instancia dentro da nossa class no caso temos vários nesse Exemplo
+no caso vamos usar o id vai trazer os id ou um apenas o primeiro. Caso alguma mudança traz outros tipos.
+Outros tipos como id, nome, usuario, senha, etc. Se eu quero uma lista basta fazer um interavel do tipo
+x = session.query(Pessoa).all()
+for i in x:
+    print(i.nome) ou outro que queira trazer
+
+Posso ainda trazer apenas por filtro que eu desejo
+x2 = session.query(Pessoas).filter(Pessoa.nome=='Lucas').first() # Retorna o primeiro objeto que atende ao filtro
+nesse caso traz apenas o filtro para nome Lucas e sendo o primeiro que encontrar ou ainda Posso
+x2 = session.query(Pessoas).filter(Pessoa.nome=='Lucas') para trazer todos com aquele nome, usando o interavel vai de id
+vai vir apenas os id que tem aquele nome ou outras qualidades relacionadas aquele nome a esse filtro feito.
+Uma forma analoga sem precisar trazer varios paramentros filter é só fazer: 
+x3 = session.query(Pessoas).filter_by(nome='Lucas', usuario='Lukinha69') e colocar quantos paramentros quer trazer
+
+
+
