@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import or_
 from ORM import Pessoas # Importando a classe Pessoas do arquivo ORM.py
 
 def RetornaSession():
@@ -19,8 +20,14 @@ x2 = session.query(Pessoas).filter(Pessoas.nome=='Lucas') # Retorna o primeiro o
 #print(x1[0].id) # Imprime o id do primeiro objeto da lista x1
 x3 = session.query(Pessoas).filter_by(nome='Fabio', usuario='Cofabi123')
 
-for i in x3:
+'''for i in x3:
     print(i.id) # Imprime o nome de cada objeto da lista x1
+'''
+y = session.query(Pessoas).filter(Pessoas.id == 5).all() # Retorna todos os objetos que atendem a pelo menos um dos filtros
+y[0].nome = 'Joana' # Altera o nome do primeiro objeto da lista y
+y[0].senha = 'novaSenha' # Altera a senha do primeiro objeto da lista y
+y[0].usuario = 'jjkf02' # Altera o nome do primeiro objeto da lista y
+session.commit() # Salva as alterações no banco de dados
 
 '''
 x = Pessoas(nome='Lucas', 

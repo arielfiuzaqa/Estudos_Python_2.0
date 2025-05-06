@@ -159,4 +159,27 @@ Uma forma analoga sem precisar trazer varios paramentros filter é só fazer:
 x3 = session.query(Pessoas).filter_by(nome='Lucas', usuario='Lukinha69') e colocar quantos paramentros quer trazer
 
 
+5 - Or
+Vamos fazer a importação do or que vai ser feito puxando essa biblioteca from sqlalchemy import or_
+utilizando a mesma sintese que usavamos anteriormente, 
+y = session.query(Pessoa).filter(or_(Pessoa.nome == 'Fabio', Pessoa.usuario == 'Cofabi123')).all()
+o que traz tudo relacionado pelos interaveis quando colocamos o laço for para rodar vem todos que tem relação com
+o que colocamos lá
+for i in y:
+    print(i.id) # Imprime o nome de cada objeto da lista y
+
+
+6 - Update
+Basicamente conseguimos mudar qualquer item de informação dentro do nosso banco de dados atraves do
+Update, nesse caso vamos esta alterando apenas os nomes. Utilizando o mesmo recurso
+y = session.query(Pessoas).filter(Pessoas.id == 5).all() com pequenas alterações.
+Assim filtramos trazendo a informação relacionada ao id 5 e pela posição agora conseguimos mudar pelas
+colunas, as posições agora colocam as colunas em cheque. y[0].nome = 'Jose' e adicionamos a baixo o nosso
+session.commit() para que tudo seja adicionado corretamente, lembra um pouco o nesse aspecto na hora do commit
+mudando assim o nome Fabio para Jose vamos tentar mudar agora nosso usuario também para jjfk02 da mesma linha
+bastando fazer as alterações de y[0].nome = 'Jose' para y[0].usuario == 'jjfk02'
+e assim para todos as alterações que eu desejo resolver.
+
+
+7 - Delete
 
