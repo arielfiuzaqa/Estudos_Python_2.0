@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -31,6 +31,21 @@ class Pessoas(Base):
     nome = Column(String(50), nullable=False)
     usuario = Column(String(20), nullable=False)
     senha = Column(String(10), nullable=False)
+
+# Definindo a tabela Categoria
+class Categoria(Base):
+    __tablename__ = 'categoria'
+    id = Column(Integer, primary_key=True)
+    nome = Column(String(50), nullable=False)
+    descricao = Column(String(100), nullable=False)
+
+# Definindo a tabela Produto
+class Produto(Base):
+    __tablename__ = 'produto'
+    id = Column(Integer, primary_key=True)
+    produto = Column(String(50), nullable=False)
+    id_categoria = Column(Integer, ForeignKey('categoria.id'), nullable=False)
+    
 
 # Aqui poderia criar várias tabelas, mas como o foco é só um exemplo, vamos deixar assim mesmo.
 
