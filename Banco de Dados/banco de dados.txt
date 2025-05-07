@@ -226,6 +226,11 @@ de aprendizado que eu considerar importantes e impertinentes estarei explicando 
 
 Esse projeto é constituido por 5 aulas do inicio ao fim.
 Com cerca de 50 minutos com explicações 
+Para a criptografia foi usado o char256 e por isso a String tem 100 caracteres
 
-
+Inserimos ate o momento apenas uma tabelas com funcionalidade bem basica de cadastro e login, 
+mas mais na frente seria interessante deixar mais robusto esse codigo, um pouco mais profissional
+como tudo que eu faço.
+O bom do estilo MVC é que podemos fazer a view da forma que quisermos mantendo tudo relacionado a o
+controller e model ou outros.
 
