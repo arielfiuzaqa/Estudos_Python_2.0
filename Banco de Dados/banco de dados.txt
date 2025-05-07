@@ -179,7 +179,22 @@ session.commit() para que tudo seja adicionado corretamente, lembra um pouco o n
 mudando assim o nome Fabio para Jose vamos tentar mudar agora nosso usuario também para jjfk02 da mesma linha
 bastando fazer as alterações de y[0].nome = 'Jose' para y[0].usuario == 'jjfk02'
 e assim para todos as alterações que eu desejo resolver.
+y = session.query(Pessoas).filter(Pessoas.id == 5).all() # Retorna todos os objetos que atendem a pelo menos um dos filtros
+y[0].nome = 'Joana' # Altera o nome do primeiro objeto da lista y
+y[0].senha = 'novaSenha' # Altera a senha do primeiro objeto da lista y
+y[0].usuario = 'jjkf02' # Altera o nome do primeiro objeto da lista y
+session.commit() # Salva as alterações no banco de dados
 
 
 7 - Delete
+Agora é hora de aprender a deletar alguns valores da minha base de dados, antes aprendi a deletar a propria base de
+dados agora aprender a deletar alguns valores dessa base de dados. É bem simples de se fazer:
+z = session.query(Pessoas).filter(Pessoas.id == 3).delete() # Deleta o objeto que atende ao filtro
+session.commit() # Salva as alterações no banco de dados
+quando rodamos temos a exclusão da linha relacionada ao id == 3 e temos uma outra forma também recomendada que é:
+# Deletando dados com filtro one()
+z = session.query(Pessoas).filter(Pessoas.id == 3).one() # Deleta o objeto que atende ao filtro
+session.delete(z) # Deleta o objeto da sessão
+session.commit() # Salva as alterações no banco de dados
+
 
