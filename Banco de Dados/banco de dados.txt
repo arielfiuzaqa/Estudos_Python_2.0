@@ -198,3 +198,24 @@ session.delete(z) # Deleta o objeto da sessão
 session.commit() # Salva as alterações no banco de dados
 
 
+8, 9 e 10 - Criando Tabelas novas, Inserindo valores e ForingKey(Chave Estrangeira)
+Criamos duas tabelas novas que são Categoria e Produto onde produtos faz referencia atraves da ForingKey 
+a Categoria desse produto. Bastando incerir o id_categoria=numero da Categoria, um exemplo prático:
+# Adicionando em produtos
+x = Produto(produto='Cerveja', id_categoria=1)
+y = Produto(produto='Banana', id_categoria=2)
+z = Produto(produto='Maminha', id_categoria=3)
+session.add_all([x, y, z]) # Adiciona todos os objetos à sessão
+session.commit() # Salva as alterações no banco de dados
+
+Mas claro que antes precisamos ter adicionado as categorias dessa forma
+x = Categoria(nome='Frios', descricao='Tudo relacionado a frios')
+y = Categoria(nome='Frutas', descricao='Frutas em geral')
+z = Categoria(nome='Proteinas', descricao='Proteinas em geral')
+session.add_all([x, y, z]) # Adiciona todos os objetos à sessão
+session.commit() # Salva as alterações no banco de dados
+
+Podemos assim ir inserindo mais produtos e mais categoria a eles. Logo faremos sistemas
+onde será fácil de se fazer e implementar qualquer produto de forma bem completa no banco de dados
+
+

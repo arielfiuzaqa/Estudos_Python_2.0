@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import or_
-from ORM import Pessoas # Importando a classe Pessoas do arquivo ORM.py
+from ORM import Pessoas, Categoria, Produto # Importando a classe Pessoas e Categoria e Produto do arquivo ORM.py
+
 
 def RetornaSession():
     
@@ -19,9 +20,9 @@ session = RetornaSession()
 '''z = session.query(Pessoas).filter(Pessoas.id == 3).delete() # Deleta o objeto que atende ao filtro
 session.commit() # Salva as alterações no banco de dados'''
 # Deletando dados com filtro one()
-z = session.query(Pessoas).filter(Pessoas.id == 2).one() # Deleta o objeto que atende ao filtro
+'''z = session.query(Pessoas).filter(Pessoas.id == 2).one() # Deleta o objeto que atende ao filtro
 session.delete(z) # Deleta o objeto da sessão
-session.commit() # Salva as alterações no banco de dados
+session.commit() # Salva as alterações no banco de dados'''
 
 '''x1 = session.query(Pessoas).all() # Retorna todos os objetos da tabela Pessoas
 x2 = session.query(Pessoas).filter(Pessoas.nome=='Lucas') # Retorna o primeiro objeto que atende ao filtro
@@ -52,4 +53,18 @@ y = Pessoas(nome='Fabio',
 #session.add_all([x, y]) # Adiciona todos os objetos à sessão
 #session.rollback() # Desfaz as alterações na sessão
 #session.commit() # Salva as alterações no banco de dados
+
+# Adicionando em produtos
+x = Produto(produto='Refrigerante', id_categoria=1)
+y = Produto(produto='Mamao', id_categoria=2)
+z = Produto(produto='Pasteurizado de Soja', id_categoria=3)
+session.add_all([x, y, z]) # Adiciona todos os objetos à sessão
+session.commit() # Salva as alterações no banco de dados
+
+# Adicionando as categorias
+'''x = Categoria(nome='Frios', descricao='Tudo relacionado a frios')
+y = Categoria(nome='Frutas', descricao='Frutas em geral')
+z = Categoria(nome='Proteinas', descricao='Proteinas em geral')
+session.add_all([x, y, z]) # Adiciona todos os objetos à sessão
+session.commit() # Salva as alterações no banco de dados'''
 
