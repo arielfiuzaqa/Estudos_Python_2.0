@@ -219,3 +219,13 @@ Podemos assim ir inserindo mais produtos e mais categoria a eles. Logo faremos s
 onde será fácil de se fazer e implementar qualquer produto de forma bem completa no banco de dados
 
 
+PROJETO PRÁTICO 2 - SISTEMA DE LOGIN 
+Esse projeto vai esta no diretório de projeto e se chamará sistema de login
+assim vamos dar continuidade a todo o projeto por lá e quaisquer informações
+de aprendizado que eu considerar importantes e impertinentes estarei explicando aqui.
+
+Esse projeto é constituido por 5 aulas do inicio ao fim.
+Com cerca de 50 minutos com explicações 
+
+
+
