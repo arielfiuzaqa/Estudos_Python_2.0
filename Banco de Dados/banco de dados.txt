@@ -234,3 +234,16 @@ como tudo que eu faço.
 O bom do estilo MVC é que podemos fazer a view da forma que quisermos mantendo tudo relacionado a o
 controller e model ou outros.
 
+
+| SOCKET | Criando aplicações através da rede
+1 - Enviando mensagem através da rede:
+Antes de aprender desenvolvimento web, como criar paginas HTML e outros é necessário saber como funciona uma
+rede e como enviar informação através da rede.
+Como nosso professor não é um mestre em redes, vamos aprender a parte de programação relacionado a isso, 
+e a parte de rede de forma mínima, mas nada impede de avançar mais depois sozinho.
+
+Vamos montar um Client Service no diretório de projetos para rodar 100% do tempo onde vai receber uma imagem
+e salvar em uma determinada pasta. O cliente vai ser um arquivo python que quando se roda esse arquivo ele enviar
+uma imagem para um determinado servidor.
+Criaremos um client.py e um server.py utilizando o import socket e rodando local
+
