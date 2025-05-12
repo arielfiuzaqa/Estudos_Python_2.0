@@ -236,7 +236,7 @@ controller e model ou outros.
 
 
 | SOCKET | Criando aplicações através da rede
-1 - Enviando mensagem através da rede:
+1, 2 - Enviando mensagem através da rede:
 Antes de aprender desenvolvimento web, como criar paginas HTML e outros é necessário saber como funciona uma
 rede e como enviar informação através da rede.
 Como nosso professor não é um mestre em redes, vamos aprender a parte de programação relacionado a isso, 
@@ -246,4 +246,19 @@ Vamos montar um Client Service no diretório de projetos para rodar 100% do temp
 e salvar em uma determinada pasta. O cliente vai ser um arquivo python que quando se roda esse arquivo ele enviar
 uma imagem para um determinado servidor.
 Criaremos um client.py e um server.py utilizando o import socket e rodando local
+
+
+1 - Demonstração do projeto (CHAT) AULAS DE 1 A 4
+Vamos montar uma especie de chat para ser utilizado por usuários diferentes usando os terminais.
+
+O Chat é um pouco mais complexo mas ao mesmo tempo simples, site de grupos, vamos ter um dicionarios com cada um
+desses dicionarios sendo uma sala, ou seja os elementos dentro será uma lista de pessoas que entraram
+naquele chat específico. 
+Ex: {sala_jogos: ['c1', 'c2', 'c3'],
+    sala_games: ['..','..','..']} Mais ou menos isso para não dizer exatamente.
+
+Com isso vamos ter um server que vai ficar responsavel de quando o c1 enviar mensagem o c2 e c3 receber essas
+mensagem. E isso serve para todos os clientes dentro da sala e assim o servidor age com todos.
+
+Vamos criar o servidor primeiro usando o socket para isso. 
 
