@@ -262,3 +262,64 @@ mensagem. E isso serve para todos os clientes dentro da sala e assim o servidor 
 
 Vamos criar o servidor primeiro usando o socket para isso. 
 
+
+DESENVOLVIMENTO WEB - API
+1 - Teoria WEB:
+Nesse modulo vamos começa a fazer nossos primeiros desenvolvimentos web, utilizando api.
+Utilizando um framework python para construção de api's. E aprender como funciona esses sistemas web
+aprendendo a usar uma ferramenta e o modo de aprender a aprender a usar qualquer ferramenta, com isso,
+fica tudo mais fácil na hora de aprender qualquer outra ferramenta.
+A ferramenta é o Fast API mas o principal é entender o raciocinio e a logica por de trás do que vamos 
+construir, o que cada componente age dentro da rede.
+
+Como funciona a rede?
+Quando acessamos um site atraves de uma URL como exemplo o facebook estamos escrevendo um dominio que 
+aponta para um determinado IP onde esse IP tem um determinado servidor que contém a dimensão de todas
+aquelas informações que aquela rede proporciona. 
+Quando enviamos uma informação para o IP estamos fazendo uma request também chamada requisição
+e o site(IP - Servidor) nos manda de volta uma response que é uma resposta, formando assim um ciclo
+de request -> response -> request -> response e assim sucessivamente enquanto esta utilizando o site/servidor.
+
+Podemos criar uma unica api com várias funções que pode conectar com diferentes tipos de tecnologias para
+diferentes dispositivos moveis ou 'fixos'.
+
+2 - Primeira API
+Colocando a mão na massa! Instalando pip install fastapi
+vamos criar uma api de testes em testeAPI.py só para testes iniciais entendendo os mecanismos básicos
+Para chamar uma determinada função da API deve ter um tipo de decorador que vai chamar a função da API
+quando tal URL for acessada e cada uma vai ser acessada diferente dependendo do endpoint.
+
+Como o Fast API usa o servidor do uvicorn vamos usa-lo para poder criar o servidor que vai fazer
+aquelas trocas de infomações onde vou poder enviar e receber de acordo, para utilizar aqui na minha
+maquina mesmo nesse primeiro momento. Chamando o uvicorn no terminal: uvicorn aplicação:instancia --reload 
+uvicorn chama a parte de aplicação seria o .py que esta o app sem o .py e a instancia é chamar o decorador
+já o --reload é para ficar rodando as alterações enquanto estou conectado, seria em tempo real.
+E claro que para fazer tudo isso é necessário esta dentro da pasta que se encotra o .py que quer rodar.
+
+Instalando o uvicorn:  pip install uvicorn
+
+O decorador vai trazer para cada tipo de endpoint uma coisa difente para cada função ou funções que eu colocar
+a baixo dele. No caso do nosso exemplo printou na tela uma mensagem com o decorador simples, vou deixar o codigo aqui:
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "Hello World"}
+
+Printando na tela {"message": "Hello World"}
+
+Com pequenas modificações ficamos assim para cada endpoint
+@app.get("/home") # 127.0.0.1:8000/home
+def root():
+    return {"message": "Home"}
+@app.get("/cadastro") # 127.0.0.1:8000/cadastro
+def root():
+    return {"message": "Cadastro"}
+@app.get("/login") # 127.0.0.1:8000/login
+def root():
+    return {"message": "Login"}
+
+
+
+3 - Consumindo API
