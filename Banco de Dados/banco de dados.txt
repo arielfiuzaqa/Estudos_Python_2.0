@@ -323,3 +323,95 @@ def root():
 
 
 3 - Consumindo API
+Geralmente uma api não é feita para se ver atraves de um computador mas sim para fazer requisição
+atraves da linguagem de programação executando alguma função sem precisar 'aparecer'.
+Agora vamos montar outros exemplo e nesse caso vamos fazer um arquivo .py chamado req.py
+para utilizar a biblioteca requests também que se instala assim: pip install requests.
+
+Conseguimos saber os tipos de requisição que temos atraves do .json() e outros atraves da URL.
+
+4 - Recebendo parâmetros
+Vamos agora aprender a mandar paramentros e receber esses paramentros.
+Começando a criar o nosso famoso def main para poder iniciar.
+temos que 127.0.0.1:8000/docs já faz parte e serve para fazer alguns testes da biblioteca.
+Fizemos algumas requisições do tipo get, agora vamos fazer algumas do tipo post.
+
+usuario = [(1, "Lucas", "123456"), (2, "João", "123456"), (3, "Maria", "123456")]
+
+#127.0.0.1:8000/docs
+@app.get("/usuario/{id}")  # 
+def main(id: int):
+    for i in usuario:
+        if i[0] == int(id):
+            return {"id": i[0], "nome": i[1], "senha": i[2]}
+    return {"message": "Usuario não encontrado"}
+
+
+Agora vamos para o tipo post.
+e com a alteração do req.py assim: 
+# Post
+retorno = requests.post('http://127.0.0.1:8000/usuario', params={'nome': 'Lucas'})
+print(retorno.json())
+
+# no testeAPI assim.
+@app.post("/usuario")
+def main(nome: str):
+    for i in usuario:
+        if i[1] == nome:
+            return {"id": i[0], "nome": i[1], "senha": i[2]}
+    return {"message": "Usuario não encontrado"}
+
+
+
+5 - Pydantic 1
+Ate agora esta sendo incrivel a questão das requisições vias post e get.
+Pydantic é uma biblioteca Python utilizada para validação de dados, permitindo definir 
+modelos com tipos e validações específicas. É usado para garantir que os dados recebidos em uma 
+aplicação não tenham formato e tipo corretos, prevenindo erros e facilitando o tratamento de dados, 
+especialmente em contextos como APIs e ETL. 
+
+from pydantic import  # Para poder trazer e utilizar essa biblioteca
+
+# Criamos um objeto usuário e assim já recebemos esse objeto como paramentro do nosso post
+class Usuario(BaseModel):
+    id: int
+    nome: str
+    senha: str
+
+@app.post("/usuario")
+def main(usuario: Usuario):
+    return {"id": usuario.id, "nome": usuario.nome, "senha": usuario.senha} # Ou return usuario
+
+
+6 - Pydantic 2
+Vamos agora começar a simular como se fosse em um banco de dados, pois vamos trabalhar com Banco
+de dados. Vamos continuar utilizando o codigo anterior mas nesse caso fazendo algumas adições.
+Criamos assim uma lista utilizando o usuários. 
+from pydantic import BaseModel
+
+class Usuario(BaseModel):
+    id: int
+    nome: str
+    senha: str
+
+lista = [
+    Usuario(id=1, nome="Lucas", senha="123456"),
+    Usuario(id=2, nome="João", senha="123456"),
+    Usuario(id=3, nome="Maria", senha="123456")
+    ]
+
+# Cadastra um novo usuario
+@app.post("/usuario")
+def main(usuario: Usuario):
+    lista.append(usuario)
+    return "usuario adicionado com sucesso"
+
+# Mostra todos os usuarios cadastrados
+@app.get("/usuarioListar")
+def main():
+    return lista
+
+
+
+7 - PROJETO 1 - TODO (API)
+Iniciaremos um novo projeto para revisar o que vimos ate agora sobre API.
