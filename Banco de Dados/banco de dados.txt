@@ -415,3 +415,23 @@ def main():
 
 7 - PROJETO 1 - TODO (API)
 Iniciaremos um novo projeto para revisar o que vimos ate agora sobre API.
+Será uma TODO List o que traduzindo é uma lista de tarefas.
+Primeiro vamos montar a estrutura que vai ser a nossa lista de tarefas
+e criamos uma lista_tarefas = [] que vai ser preenchida consumindo uma instancia
+da class Todo(BaseModel): isso para cada uma.
+Nossa Todo:
+# Criando a lista de tarefas
+class Todo(BaseModel):
+    tarefa: str
+    objetivo: str
+    realizada: bool
+    prazo: Optional[datetime] = None
+
+Agora vamos construir nosso primeiro endpoint será de inserir
+chamamos a função para usar a Fast API como uvicorn todolist:app --reload
+dentro da pasta que se encontra o .py que tem todas as instancias
+
+
+
+8 - PROJETO 2 - AUTENTICAÇÃO + MYSQL criação da tabela (API)
+Vai começar a ter uma cara mais profissional nossa api.
