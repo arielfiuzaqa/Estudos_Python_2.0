@@ -435,3 +435,17 @@ dentro da pasta que se encontra o .py que tem todas as instancias
 
 8 - PROJETO 2 - AUTENTICAÇÃO + MYSQL criação da tabela (API)
 Vai começar a ter uma cara mais profissional nossa api.
+No caso utilizaremos o banco de dados do SQLite já que não conseguimos instalar
+o Warmpserver por conta das autorizações de admin do sistema. Vamos lá!!
+Fizemos as criações das nossas class/tabelas do banco de dados, os chamados e todas as
+informações que precisamos para nossas tabelas.
+
+
+9 - PROJETO 2 - AUTENTICAÇÃO + MYSQL CADASTRO
+Agora é o momento de fazer a nossa API e desenvolve-la. 
+Tivemos alguns testes que deram um pouco de problemas, pelo que aconteceu não estou conseguindo
+achar o mesmo caminho do CONN em ambas aplicações.
+
+
+10 - PROJETO 2 - AUTENTICAÇÃO + MYSQL LOGIN
+
