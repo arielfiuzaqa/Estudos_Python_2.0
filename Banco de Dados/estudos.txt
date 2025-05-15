@@ -449,8 +449,83 @@ achar o mesmo caminho do CONN em ambas aplicações.
 
 10 - PROJETO 2 - AUTENTICAÇÃO + MYSQL LOGIN
 Tivemos alguns problemas mas vamos consertar!!
+Por alguma razão os parametros não estão reconhecendo a senha e a salvando!
 
 
 
 FRONT-END|HTML
 1 - O que vamos aprender?
+Vamos aprender a criar paginas de internet com elementos HTML e todas essas formas. 
+Nossa linguagem de backend é o python mas utilizaremos linguagens próprias como
+HTML(linguagem de marcação), vamos utilizar o CSS para estilizar nossas pastas, 
+javascript para algumas modalidades como movimentos e funcionalidades do nosso frontend.
+
+O pyhton possui muitos frameworks para criação utilizando essas linguagens de estilos,
+que se chama view. 
+
+2 - Estrutura do arquivo
+Para os aprendizados vamos criar uma pasta nova com o nome de frontend para aprender tudo
+relacionado. Tudo que eu coloco abrindo chaves <tag> é chamado de tag e geralmente quando
+abrimos nos fechamos também da mesma forma mas com uma barra </tag>
+e tudo entre as tags esta dentro dos "poderes" da tag.
+
+Abrimos a nossa primeira tag que é o <hmtl></html> onde se coloca todas as partes de dentro
+da linguagem do html e dentro dividimos em duas partes que é o <head></head> que é o cabeçalho
+e o <body></body> que representa o corpo do nosso documento html.
+Dando um exemplo para se gravar bem o html seria o pai de head e body, o filho de head o title
+e seria o neto de html e assim por diante de acordo com a arvore montada da estrutura.
+E cada tipo de tag vai ter uma função diferente e cada uma pode conter determinadas individualidades
+que será chamada de 
+
+
+3 - Títulos
+Vamos focar em cada parte mas vou colocando tudo que eu for aprendendo aqui no nosso corpo tudo bem?
+E quem sabe ate no corpo do nosso site, ate porque estamos aqui aprendendo e deve ser bem aprendido.
+Tudo dentro do HTML serve apenas para indicar cada parte e cada lugar, para criar os estilos vamos ter
+que utilizar o nosso CSS e que vamos aprender no decorrer dos nossos passos aqui dentro.
+Olá tudo bem? Como vai você?
+        <h1>Meu Titulo</h1>
+        <h2>Meu Titulo</h2>
+        <h3>Meu Titulo</h3>
+        <h4>Meu Titulo</h4>
+        <h5>Meu Titulo</h5>
+        <h6 style="font-size: 50;">Meu Titulo</h6> Fica como maior mas não o mais importante na pagina
+
+
+4 - Parágrafos e divisões
+DEntro do nosso body
+<h1>O que é Java</h1>
+<h3>Java é pior linguagem de programação.</h3>
+<p>Java é chato para um caralho.</p>
+Mas podemos ainda dividir os dois blocos de paragrafos usando a nossa div.
+Basicamente simples, usamos também o section e estilizamos só para dar uma destacada.
+
+
+5, 6 - Links
+Dentro de uma pagina existem diversos links que vão nos mandar para outras partes do site ou
+ate para outros sites inclusive. Como podemos fazer para criar esses links dentro do nosso projeto?
+E qual a maneira correta de se fazer isso? A maneira correta seria: 
+<a href="https://www.python.org/">Mais informações sobre Python</a> Assim temos um exemplo prático.
+pademos também redirecionar para outra pagina que estamos desenvolvendo também de forma
+separada. 
+
+
+7 - Imagens
+Aprendendo a colocar imagens no nosso HTML que pode ser de duas formas, a primeira é colocar
+um link ate uma imagem e a outra é colocar uma imagem que esta no computador ou servidor que leva
+ate aquela imagem. E podemos colocar atraves da tag <img> exemplo:
+<img src="https://files.tecnoblog.net/wp-content/uploads/2022/12/python-ari-joury-3.jpg" alt="Python" width="300" height="200">
+ 
+
+
+
+
+O que faz cada tag
+<title></title> Define o titulo que vai esta lá na parte da pagina.
+<h1></h1> Define um titulo onde eu coloca-lo que tem um tamanho h1 > h2 > h3 > hn 
+Mostrando o nivel de importancia não necessariamente de tamanho
+<div></div> Indica uma divisão entre partes do body que podem ser e ter regras e estilos
+diferentes assim como formatos sem uma atrapalhar a outra.
+<section></section> Também divide mas é um pouco mais moderninho a sua forma de estilizar.
+<a href="site.com.br"></a> Serve para referenciar um link dentro de um texto.
+<img> tag para colocar ou apontar uma determinada imagem.
