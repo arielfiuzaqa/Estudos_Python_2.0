@@ -448,4 +448,9 @@ achar o mesmo caminho do CONN em ambas aplicações.
 
 
 10 - PROJETO 2 - AUTENTICAÇÃO + MYSQL LOGIN
+Tivemos alguns problemas mas vamos consertar!!
 
+
+
+FRONT-END|HTML
+1 - O que vamos aprender?
