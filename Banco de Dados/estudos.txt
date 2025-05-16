@@ -536,6 +536,80 @@ E dentro ainda das linhas <li></li> podemos colocar outras tags para outras fina
 
 
 10 - Barra de navegação
+Vamos fazer um cabeçalho bem feito e para isso vamos abrir um outro arquivo que vamos chamar
+de page_exemple1.html
+Quem esta atualizado no html moderno é bom esta sempre atualizado com o header, section e footer.
+cabeçalho, sessão e rodapé.  
+
+
+11 - Formulários
+Agora vamos criar um formulário onde vamos colocar o registro e vai ter um login
+que vai conversar com algum servidor que vamos fazer também e e que vai se refletir
+dentro da nossa aplicação do frontend conectando com o backend.
+
+E dentro do nosso backend podemos fazer qualquer tipo de linguagem de programação
+no caso vamos usar o python.
+Colocamos a tag <form> para criar nosso formulário. Adicionamos um método
+dentro do form. method="POST" não é enviado atraves de uma URL e o GET é  enviado
+através de uma URL. E action="local onde enviamos a informação".
+Estamos vendo várias variações dentro do types dentro do input, de várias formas
+diferentes. Testamos os seguintes ate agora e vamos aprender mais. 
+    <div>
+        <form>
+           <input type="text" name="Nome" placeholder="Nome">
+           <input type="password" name="Senha" placeholder="Senha">
+           <input type="number" name="Idade" placeholder="Idade">
+           <input type="color" name="Cor" placeholder="Cor">
+           <input type="email" name="Email" placeholder="Email">
+           <input type="date" name="Data" placeholder="Data">
+           <input type="submit" value="Enviar Clica aqui!">
+           <input type="file" name="Arquivo" placeholder="Arquivo">
+           <input type="checkbox" name="Aceito" value="Aceito"> Aceito os termos
+           <input type="radio" name="Sexo" value="Masculino"> Masculino
+           <input type="radio" name="Sexo" value="Feminino"> Feminino
+        </form>
+    </div>
+
+
+12 - Formulários continuação...
+Temos aprensentado agora o campo <textarea> Para criar uma area para digitar qualquer coisa.
+<div aling="center">
+        <form aling="center" method="post">
+           Nome:
+              <br>
+              <input type="text" name="nome" placeholder="Digite seu nome" required>
+              <br>
+              <br>
+           Senha:
+            <br>
+                  <input type="password" name="senha" placeholder="Digite sua senha" required>
+            <br>
+            <br>
+                  <input type="submit" value="Enviar"> 
+            <br>
+            <br>
+            Cidade:
+            <br>
+            <select name="cidade">
+                <option value="F">Franca</option>
+                <option value="SP">São Paulo</option>
+                <option value="RP">Ribeirão Preto</option>
+            </select>
+            <br>
+            <br>
+            Sexo:
+            <input type="radio" name="sexo" value="M">Masculino
+            <input type="radio" name="sexo" value="F">Feminino
+            <br>
+
+        </form>
+    </div>
+
+
+
+FRONTEND | CSS
+1 - CSS inline
+
 
 
 
@@ -555,3 +629,7 @@ Diferença entre th e td é que th é como se fosse em negrito e td não.
 <ul></ul> Para criação de listas não ordenada
 <ol></ol> Para criação de uma lista ordenada
 <li></li> Cria as linhas das listas com pontos no lado esquerdo.
+<tr></tr> É uma linha quando criamos uma linha.
+<td></td> É quando criamos uma coluna Principalmente quando é dentro da linha
+<form> Tudo que esta dentro dessa tag esta dentro de um formulário.
+
