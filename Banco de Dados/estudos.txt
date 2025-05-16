@@ -517,6 +517,25 @@ ate aquela imagem. E podemos colocar atraves da tag <img> exemplo:
 <img src="https://files.tecnoblog.net/wp-content/uploads/2022/12/python-ari-joury-3.jpg" alt="Python" width="300" height="200">
  
 
+8 - Tabelas
+Criando tabelas de maneira fácil de direta usando.
+<hr> Uma linha horizontal passando.
+<table></table> Cria um tipo de tabela. E na tabela precisa definir quantas linhas vão ter
+atraves do <td> e temos também o <th>
+Diferença entre th e td é que th é como se fosse em negrito e td não.
+Podemos também usar como parametro o colspan="quantos ocupa" para determinar quantos ocupam,
+dentro de uma determinada tabela. 
+
+
+9 - Listas
+Criação de listas. Para a criação de listas usamos o <ul></ul>
+<ul></ul> Para criação de listas não ordenada
+<ol></ol> Para criação de uma lista ordenada
+<li></li> Cria as linhas das listas com pontos no lado esquerdo.
+E dentro ainda das linhas <li></li> podemos colocar outras tags para outras finalidades.
+
+
+10 - Barra de navegação
 
 
 
@@ -529,3 +548,10 @@ diferentes assim como formatos sem uma atrapalhar a outra.
 <section></section> Também divide mas é um pouco mais moderninho a sua forma de estilizar.
 <a href="site.com.br"></a> Serve para referenciar um link dentro de um texto.
 <img> tag para colocar ou apontar uma determinada imagem.
+<hr> Uma linha horizontal passando.
+<table></table> Cria um tipo de tabela. E na tabela precisa definir quantas linhas vão ter
+atraves do <td> e temos também o <th>
+Diferença entre th e td é que th é como se fosse em negrito e td não.
+<ul></ul> Para criação de listas não ordenada
+<ol></ol> Para criação de uma lista ordenada
+<li></li> Cria as linhas das listas com pontos no lado esquerdo.
