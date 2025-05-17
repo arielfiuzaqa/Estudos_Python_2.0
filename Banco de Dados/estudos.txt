@@ -605,14 +605,6 @@ Temos aprensentado agora o campo <textarea> Para criar uma area para digitar qua
         </form>
     </div>
 
-
-
-FRONTEND | CSS
-1 - CSS inline
-
-
-
-
 O que faz cada tag
 <title></title> Define o titulo que vai esta lá na parte da pagina.
 <h1></h1> Define um titulo onde eu coloca-lo que tem um tamanho h1 > h2 > h3 > hn 
@@ -632,4 +624,137 @@ Diferença entre th e td é que th é como se fosse em negrito e td não.
 <tr></tr> É uma linha quando criamos uma linha.
 <td></td> É quando criamos uma coluna Principalmente quando é dentro da linha
 <form> Tudo que esta dentro dessa tag esta dentro de um formulário.
+<textarea></textarea> Abre uma caixa de texto para ser escrito.
+
+
+
+FRONTEND | CSS
+1 - CSS inline
+O HTML é onde ficam as coisas e as coisas que quero mostrar dentro do documento.
+Já o CSS é como mostrar as coisas, seria a forma de estilizar as coisas e deixar mais bonito.
+Vamos criar um novo documento chamado index_css.html para esses estudos do CSS dentro do HTML.
+
+Abrindo um h1 e colocando dentro um style="" podemos definir certas caracteristicas ao nosso texto
+principal. 
+    <h1 style="color: rgb(247, 46, 11); font-size: 120px; font-family: monospace;" >Meu Código</h1>
+O que em um projeto serio não se faz assim mas sim separadamente cada parte tanto o HTML quanto o CSS.
+Colocamos na TAG style dentro do nosso head e assim tudo que estiver dentro vai ser considerado como parte
+de codigos CSS.
+
+
+2 - Classes e id's
+Colocamos na TAG style dentro do nosso head e assim tudo que estiver dentro vai ser considerado como parte
+de codigos CSS.
+Abrindo uma tag especifica e as chaves para acessar essas tags temos que exemplo: h1 { tudo que estiver dentro
+vai ser o estido dentro dessa tag }. 
+
+Pode ser utilizando também o id="texto que designa o id" e usar esse id dentro do style utilizando
+#texto que designa o id. Podemos assim selecionar determinadas tags mesmo as tags se repetindo em outros
+lugares dos codigos. Lembre que o id deve ser unico por elemento ou tag, um identificador unico.
+Então não repetir. #exemplo1{}
+
+Podemos utilizar as classes também ai nesse caso usamos sim para mais de uma tag ou elementos.
+E para se referenciar a uma classe é usando um (.) ponto. .exemplo1{}
+
+
+3 - Importando arquivos CSS
+Basicamente mostrando como se cria um arquivo a parte para colocar os codigos do CSS para não misturar
+com os HTML além de ficar mais organizados.
+
+
+4 - Bordas
+Vamos criar uma div ao redor dos nossos textos primeiramente. 
+#container1{
+    border-color: blue green red yellow; # Cada lado da borda com uma cor
+    border-width: 2px 10px 1px 20px; # Cada lado da borda com uma espessura
+    border-style: solid dotted double dashed; # Cada lado da borda com um estilo de traço
+}
+
+
+5 - Backgrounds
+Vamos testar alguns tipos de Backgrounds dos estilos CSS.
+background-color: #ec16a5; # Para a cor de fundo de um determinada div que colocamos. Com rgva conseguimos
+mexer na opacidade da cor também.
+    background-image: url('\logo_af_sem_fundo.png'); # Escolhi a imagem
+    background-size: 80px; # Disse seu tamanho
+    background-repeat: no-repeat; # Pedi para que não se repita.(Pois repete várias vezes.)
+    background-position: center center; # Para colocar a posição de centro na imagem.
+E isso colocamos dentro da nossa div que esta apontando para um suposto cabeçalho, mas se colocarmos
+isso dentro do body vamos ter a imagem centralizada bem no meio da pagina.
+    background-image: url('\logo_af_sem_fundo.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+6 - Margens
+Tem algumas coisas que se aprende melhor fazendo do que escrevendo aqui, vamos fazer dessa forma para aprender
+de formas mais profunda e fácil as coisas que precisam ser feitas, com bastante prática e foco.
+Estude mais sobre border e os estilos assim como os outros que vamos ter aqui.
+
+
+7 - Padding
+Estude mais sobre Padding e os estilos assim como os outros que vamos ter aqui.
+Veja exemplos e teste formas diferentes, seja criativo.
+
+
+8 - Float
+Estude mais sobre Float e os estilos assim como os outros que vamos ter aqui.
+Veja exemplos e teste formas diferentes, seja criativo. Aprendendo a fazer as div flutuarem para algum lado
+no caso foi para left.
+
+
+9 - Media queries
+@media() - Para poder deixar responsivo nosso css mudando de acordo com o tamanho da tela e a 
+responsividade da tela.
+@media(max-width: 600px){
+    .conteudo{
+    background-color: green;
+    width: 40%;
+    height: 200px;
+    border: 1px solid blueviolet;
+    float: left;
+    margin-left: 5%;
+}
+}
+Vale a pena fazer mais alguns testes para testar modelos mais bonitos e sofisticados.
+
+
+10 - Facilitando design responsivo
+Mostrando apenas o bizu do <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+11 - Overflow
+overflow:  É uma propriedade para quando tiver várias informações dentro de um mesmo objeto.
+Testes alguns e veja qual o melhor caso para a quantidade de informações daquela div.
+
+12 - Hover
+É uma propriedade que muda a propriedade anterior criando uma ideia de mudança ou movimento
+de uma determinado elemento dentro do nosso site.
+Juntando com transition: 1s; fica muito melhor que assim a transição fica mais tranquila e fica visual.
+
+13 - Focus
+Criar alguns movimentos e interações assim que clica ou interage com o elemento.
+
+14 - Links
+Vai depender de como eu quero fazer e qual forma devo usar, cores e tudo mais.
+
+
+COMANDO DO CSS
+<style></style> Codigo que abre o espaço para colocar todos os estilos, incluindo o local dos estilos.
+margin (estude) relacionado a margem de onde eu coloco. 
+Padding (estude) relacionado aos elementos dentro de uma div.
+Float (estude) Fazer os objetos flutuarem para os lados que considera melhor
+Overflow (estude) Faz com que as informações de uma determinada div se comporte de alguma maneira
+caso ultrapasse o numero de informações que não cabem mais na div.
+Hover (estude) É uma propriedade que muda a propriedade anterior criando uma ideia de mudança ou movimento
+de uma determinado elemento dentro do nosso site.
+Juntando com transition: 1s; fica muito melhor que assim a transição fica mais tranquila e fica visual.
+Focus (estudo) Criar alguns movimentos e interações assim que clica ou interage com o elemento.
+utilizando outline: none; ajuda para não aparecer a 'caixinha' que ele se encontra.
+
+
+
+FRONTEND | BOOTSTRAP
+1 - Introdução:
+
 
