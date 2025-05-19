@@ -795,4 +795,212 @@ mas completa, isso é um diferencial. Aqui estão alguns modelos e como chama-lo
 <button type="button" class="btn btn-link">Link</button>
 
 
+4 - Alertas
+Bem simples e direto, tanto para erros ou mesmo para alguma coisa a mais basta simplesmente colocar a tag correta que 
+trás esse tipo de estilização. O que eu usei como exemplo foi:
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+
+
+5 - Badges
+Usado para quando noticias novas chegam, ou algo que precise chamar mais atenção. No caso usamos como exemplo:
+<h1>Nova notícia <span class="badge badge-danger">New</span></h1>
+mas pode ser qualquer um inclusive um <a></a> onde se pode colocar um site para poder clicar
+<a href="#site" class="badge badge-danger">New</a>
+
+
+6 - Grupos de botões
+Semelhante a questão do botão, existem grupos de botões que podemos usar que já fica tudo pre-pronto para serem usados
+e organizados e podemos estiliza-los também. Os botões que testamos foram os seguintes:
+<div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <button type="button" class="btn btn-primary">3</button>
+        <button type="button" class="btn btn-danger">4</button>
+        <button type="button" class="btn btn-warning">5</button>
+        <button type="button" class="btn btn-info">6</button>
+        <button type="button" class="btn btn-dark">7</button>
+        <button type="button" class="btn btn-ligth">8</button>
+        <button type="button" class="btn btn-link">9</button>
+
+        <button type="button" class="btn btn-outline-success">10</button>
+        <button type="button" class="btn btn-outline-primary">11</button>
+        <button type="button" class="btn btn-outline-secindary">12</button>
+        <button type="button" class="btn btn-outline-danger">13</button>
+        <button type="button" class="btn btn-outline-warning">14</button>
+        <button type="button" class="btn btn-outline-info">15</button>
+        <button type="button" class="btn btn-outline-ligth">16</button>
+        <button type="button" class="btn btn-outline-dark">17</button>
+        <button type="button" class="btn btn-outline-link">18</button>
+    </div>
+
+Além disso colocar os botões na vertical também e outras formas de configuração além disso pode se quiser ainda deixar em um estilo
+próprio melhorando mais ainda as coisas.
+
+
+7 - Cards
+Conjuntos e informações sobre alguma coisa/produto ou outros. Tem imagem, um titulo do que é e geralmente um pequeno texto
+a baixo para se colocar. Dentro do bootstrap tem alguns feitos já que podem facilitar nossa vida na hora de fazer as coisas.
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="./logo_af_sem_fundo.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">AF SOLUTIONES LTDA</h5>
+            <p class="card-text">Empresa de Tecnologia da Informação voltada para automação de processos, desenvolvimento de softwares e vendas de produtos online
+                com automações de atendimentos com IA e suportes de emergencia para eventos, treinamentos e certificações.</p>
+            <a href="#" class="btn btn-primary">Faça Parte!</a>
+        </div>
+    </div>
+
+Podemos inserir uma imagem sem problemas dentro do card, o que é excelente inclusive.
+
+
+8 - Carrousel
+Vários tipos e formas, passando para o lado e com indicadores de quantidades, e muito mais. Lmebrando que da para fazer
+combinações disso. Usando cards juntamente com o os carrousel deixando as coisas bem melhores e estéticas. Moderninha.
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+Cabe adaptar para o projeto o que deseja. E assim atualizar de acordo.
+
+
+9 - Collapse
+É um tipo de botão que esconde um conteúdo depois de clicado e reaparece quando clicado novamente.
+Vamos ter um paragrafo e dentro desse paragrafo vai ter algum elemento e dentro desse mesmo elemento
+Ótimo para compactar algumas informações, torna o visual bem clear e ao mesmo tempo bem informativo ao
+se abrir. Vou colocar uns exemplos aqui.
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+
+Dois botões simples que trazem informações básicas, mas podem ser mais estilizados e daora.
+data-target="#collapseExample" -> O que ele vai abrir e fechar quando eu clicar nele. Seria como chamar um id de informação.
+Simplesmente uma das estilizações mais tops.
+
+
+10 - Dropdown
+Botão Dropdown que é simples de ser feito e com BOOTSTRAP mais simples ainda, o que seria esse botão.
+É um botão que trás opções quando se clica nele, um tipo de lista e vamos colocar um exemplo que para registrar:
+<!-- Example single danger button --> Se pode escolher diversas cores também para o botão em class.
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+
+11 - Listas
+Analisando e vendo agora grupos de listas e como pode ser mais fácil pelo BOOTSTRAP. 
+E no caso podemos ter vários tipos de listas, desde lista de botões a lista de links a vários outros.
+Simples e interessante.
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action ">
+            Grupo de Listas
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">Lista 1</button>
+        <button type="button" class="list-group-item list-group-item-action">Lista 2</button>
+        <button type="button" class="list-group-item list-group-item-action">Lista 3</button>
+        <button type="button" class="list-group-item list-group-item-action" disabled>Lista 4 - disabled</button>
+    </div>
+
+
+12 - Modal
+São situações que o app ou sites perguntam se você quer mesmo sair do site ou algo do tipo, ou se quer continuar.
+Onde você só consegue mexer no resto do site quando toma alguma decisão que o modal mostra.
+E o BOOTSTRAP tem vários modelos de modal, desde formularios a avisos, a escolhas etc. Vamos pegar apenas um como exemplo
+no momento mas é bom poder passar um tempo estudando sobre esses mesmos modais.
+<!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Botão do Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal Titulo Aqui</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Vamos colocar nossas mensagens aqui dentro do nosso modal e ver se o cliente esta de acordo.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Opções</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+Dentro do corpo do modal body pode-se colocar vários outros conjuntos de estrategias ou de funções do body.
+O id e data-target devem esta em com os mesmo valores para o botão ativar todas as configurações do botão e trazer
+todas as frases e funcionalidades dele.
+
+
+13 - Barra de progresso
+Algo mais visual para o cliente, dando um aspecto de dinamismo para toda a Situação enquanto aguarda.
+e tem 3 aspectos principais, que é o valor da barra, o valor mínimo e o valor máximo da barra.
+    <div class="progress">
+        <div style="width: 35%;" class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%
+        </div>
+    </div>
+
+
+14 - Grid layout
+
+
+
+
+OBS: Tudo que vimos aqui nessa parte de bootstrap tem na documentação e basta pesquisar para saber mais sobre.
+Usamos a versão 4.6 do bootstrap mas já existe ate a versão 5.6 que podemos usar depois. Basta ver.
+https://getbootstrap.com/docs/4.0/
+Dentro do BOOTSTRAP você pode ir juntando várias coisas diferentes dentro das próprias configurações dele
+e assim montar algo totalmente único ainda, mesmo sem estilizar de forma personalizada 100%.
+
+
 
