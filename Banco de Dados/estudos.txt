@@ -756,5 +756,43 @@ utilizando outline: none; ajuda para não aparecer a 'caixinha' que ele se encon
 
 FRONTEND | BOOTSTRAP
 1 - Introdução:
+BOOTSTRAP é um framework do css utilizando que vai facilitar nossa vida na hora de montar o que precisamos,
+em relação ao nosso querido css. Tem várias pessoas que entende bem focadas em FRONTEND mas como o nosso foco
+é no backend então vamos aprender um básico dele para fazer nossos projetos darem certo.
+Ele possui várias formatações já condicionadas e feitas para serem usadas de forma muito mais fácil e rápida,
+economizando um bom tempo em desenvolvimento de css. Mas em compensação deixar as coisas meio que 'engessadas'
+
+Esse link esta relacionado aos codigos em bootstrap usados para trazer formatações em css
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+Esses links se relacionam com codigos de js feitos a base do bootstrap feitos já. E ligando ate a minha aplicação.
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+2 - Barra de navegação
+Vamos começar a fazar a criação de uma landing page para nosso site. Vamos começar criando nossa barra
+de navegação ou nav usando navbar. E esta explicando o codigo completo que trás todas as caracteristicas
+daquele comando, que podem ser modificadas de forma bem tranquila também. 
+Super adaptavel utilizando os codigos já prontos, isso ajuda muito na hora de fazer o que se precisa,
+mas é interessante não se tornar escravo disso e saber fazer as formas sem precisa dessas coisas também,
+ferramentam ajudam ate o ponto onde te deixam burros.
+
+
+3 - Botões
+Olha, ate agora não são tantas coisas complexas em relação a estilização das coisas, mas facilita bastante
+em tudo quando comparado, mas mesmo assim para um site que seja autentico melhor é fazer o prórpio de forma
+mas completa, isso é um diferencial. Aqui estão alguns modelos e como chama-los.
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+
 
 
