@@ -992,9 +992,12 @@ e tem 3 aspectos principais, que é o valor da barra, o valor mínimo e o valor 
 
 
 14 - Grid layout
-
-
-
+Última aula antes de entrar na parte de JS para depois começarmos os projetos maiores onde vamos só aplicar tudo o
+que aprendemos ate agora e sem anotar nada, só parte prática 100% e pequenas revisões aqui. 
+Grid é grade em inglês do Bootstrap utiliza uma série de contêineres, linhas e colunas para organizar e alinhar o conteúdo. 
+Ele foi desenvolvido com flexbox e é totalmente responsivo. Abaixo, um exemplo e uma análise detalhada de como a grade é construída.
+É sempre bom estudar e testar mais formas de se fazer todos os itens que são precisos para ir ganhando sustância nas coisas,
+melhoria é continua.
 
 OBS: Tudo que vimos aqui nessa parte de bootstrap tem na documentação e basta pesquisar para saber mais sobre.
 Usamos a versão 4.6 do bootstrap mas já existe ate a versão 5.6 que podemos usar depois. Basta ver.
@@ -1003,4 +1006,7 @@ Dentro do BOOTSTRAP você pode ir juntando várias coisas diferentes dentro das 
 e assim montar algo totalmente único ainda, mesmo sem estilizar de forma personalizada 100%.
 
 
+
+FRONTEND | JAVASCRIPT 
+1 - Introdução (Javascript)
 
