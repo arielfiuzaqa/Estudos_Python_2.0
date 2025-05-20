@@ -1089,3 +1089,20 @@ switch (condição) {
 
 
 7 - While (Javascript)
+O while é uma estrutura de controle que permite que o programa execute um bloco de código repetidamente enquanto uma 
+condição for verdadeira. De forma semelhante ao python mas com algumas diferenças de sintaxe.
+while(condição){
+    //codigo # Javascript
+    //codigo # Javascript
+}
+Da para ver que precisa também do break e do continue e (parenteses) para o while.
+Temos também que o (true) é o mesmo que o (verdadeiro) e o (false) é o mesmo que o (falso) mas com primeira letra
+minuscula. Já no python é maiusculas. 
+
+
+8 - Do While (Javascript)
+O do-while é uma estrutura de controle que permite que o programa execute um bloco de código repetidamente enquanto uma
+condição for verdadeira. É semelhante ao while, mas a diferença é que o bloco de código é executado pelo menos uma 
+vez antes de verificar a condição.
+
+
