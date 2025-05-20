@@ -1009,4 +1009,83 @@ e assim montar algo totalmente único ainda, mesmo sem estilizar de forma person
 
 FRONTEND | JAVASCRIPT 
 1 - Introdução (Javascript)
+Primeiro precisamos entender que vamos usar como linguagem de backend o python e para o frontend o javascript em algumas
+situações. Vamos esta entrando um pouco na linguagem de programação de javascript e como vamos usar ela no frontend.
+mas de modo bem básico para poder fazer o que precisamos.
 
+2 - Operadores (Javascript)
+Os operadores são utilizados para realizar operações em variáveis e valores.
+Não teremos explicação de conceitos já falados na linguagem javascript mas apenas comparações com A
+do python desses mesmo conceitos para facilitar o entendimento e a velocidade de aprendizado.
+Mostrou os operadores básicos comparados com o python.
+|| no python seria or Operador de atribuição and é and também no python
+mas tem algumas mudanças que ele considera em caso de numeros e String que podem se somar ou multiplicar.
+os dois fatores.
+
+3 - Estrutura de decisão IF (Javascript)
+Estrutura de decisão é uma estrutura de controle que permite que o programa tome decisões com base em uma ou mais condições.
+O comando if é usado para tomar decisões com base em uma condição.
+utiliza a mesma palavra reservada if no python mas tem algumas diferenças de sintaxe.
+A diferença de sintaxe é que o python utiliza o : para indicar o inicio do bloco de código e o javascript utiliza {}
+e no if se usa com os parenteses e no python não. Tipo if(condição) e no python if condição:
+Vamos montar em paralelo para maior entendimento.
+if(condição){
+    //codigo # Javascript
+} 
+else if(condição) {
+    //codigo # Javascript
+}else {
+    //codigo # Javascript
+}
+
+if condição:
+    #codigo # Python
+elif condição:
+    #codigo # Python
+else:
+    #codigo # Python
+
+
+4 - Conversão de dados (Javascript)
+Converte um tipo de dado em outro. É ate simples no caso de python seria teste = int("123") no JS seria var teste = parseInt("123")
+com poucas diferenças de sintaxe. Assim é para o resto dos tipos de dados. Não muda muito mas muda alguma coisa, mas 
+a ideia central é a mesma no final.
+
+5 - Operador ternário (Javascript)
+O operador ternário é uma forma concisa de escrever uma instrução if-else em uma única linha.
+É um operador que não existe no python mas existe dentro do JS sem problemas. Não é complexo de entender.
+É como se fosse um if e else com uma sintaxe mais enxuta comparada com o python, no caso do python seria:
+if condição:
+    #codigo # Python
+else:
+    #codigo # Python
+
+No javascript seria: true seria o if e false seria o else.
+condição ? true : false
+Exemplo real: 
+var idade = 18;
+18 >= 18 ? alert("Maior de idade") : alert("Menor de idade");
+
+É ate mais simples que o python. 
+
+
+6 - Switch case (Javascript)
+O switch case é uma estrutura de controle que permite que o programa tome decisões com base em uma ou mais condições.
+Não possui dentro do python e geralmente é usado para casos em que temos muitas condições e precisamos tomar decisões 
+com base em valores.
+É quando queremos tratar uma única variavel vezes uma mesma condição e para isso usamos o switch case.
+Exemplo: E assim podemos tratar n contições de uma mesma condição em uma mesma variavel.
+switch (condição) {
+    case valor1:
+    //codigo # Javascript
+    break;
+    case valor2:
+    //codigo # Javascript
+    break;
+    case valor3:
+    //codigo # Javascript
+    break;
+}
+
+
+7 - While (Javascript)

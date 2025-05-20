@@ -116,6 +116,8 @@ h1 {
 }
 
 .projetos {
+    overflow: hidden;
+    max-width: 100%;
     padding: 6rem 2rem;
 }
 
