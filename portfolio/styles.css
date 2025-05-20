@@ -126,11 +126,19 @@ h1 {
 }
 
 .projetos-caixa {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: max-content; /* permite rolar horizontalmente */
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .projetos-card {

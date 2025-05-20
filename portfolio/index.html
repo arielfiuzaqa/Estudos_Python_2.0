@@ -23,7 +23,7 @@
                 <a href="#projetos" class="menu-link">Projetos</a>
             </li>
             <li>
-                <a href="#contato" class="menu-link">Contato</a>
+                <a href="#contatos" class="menu-link">Contato</a>
             </li>
         </ul>
     </nav>
@@ -74,6 +74,14 @@
                 </div>
             </div>
 
+            <div class="projetos-card">
+                <img src="img/python.png" alt="projeto4" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Desenvolvedor Python</h3>
+                    <p class="paragrafo-projetos">Descrição do Projeto 4</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -93,23 +101,28 @@
     </section>
 
     <script>
-        function enviarWhats(event){
-        event.preventDefault()
-        
-        const nome = document.getElementById('nome').value;
-        const mensagem = document.getElementById('mensagem').value;
-        const telefone = '5585987180747';
+        function enviarWhats(event) {
+            event.preventDefault()
 
-        const texto = `Olá me chamo ${nome}, ${mensagem}`;
-        const mensagemFormatada = encodeURIComponent(texto);
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5585987180747';
 
-        const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`;
+            const texto = `Olá me chamo ${nome}, ${mensagem}`;
+            const mensagemFormatada = encodeURIComponent(texto);
 
-        window.open(url, '_blank');
+            const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`;
+
+            window.open(url, '_blank');
 
 
         }
     </script>
+    <script>
+        const caixa = document.querySelector('.projetos-caixa');
+        caixa.innerHTML += caixa.innerHTML; // duplica os projetos para fazer loop
+    </script>
+
 
 </body>
 
