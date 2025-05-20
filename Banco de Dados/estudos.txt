@@ -1104,5 +1104,14 @@ minuscula. Já no python é maiusculas.
 O do-while é uma estrutura de controle que permite que o programa execute um bloco de código repetidamente enquanto uma
 condição for verdadeira. É semelhante ao while, mas a diferença é que o bloco de código é executado pelo menos uma 
 vez antes de verificar a condição.
+Exemplo:
+var num = 1;
+do {
+    console.log(num);
+} while (num <= 5);
+
+Vai imprimir de 1 a 5.
+
+
 
 
