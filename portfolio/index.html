@@ -126,7 +126,83 @@
         caixa.innerHTML += caixa.innerHTML; // duplica os projetos para fazer loop
     </script>
 
+    <!-- Adicione isso no final do Modal -->
+    <div id="modal-servico" class="modal" style="display: none;">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descricao"></p>
+            <ul id="modal-detalhes"></ul> <!-- Novos detalhes -->
+        </div>
+    </div>
+
+    <script>
+        // Abrir modal com dados adicionais
+        const cards = document.querySelectorAll('.projetos-card');
+        const detalhesServicos = {
+            'Engenharia de Prompt': [
+                'Criação de prompts otimizados para IA',
+                'Melhoria de desempenho em ferramentas generativas'
+            ],
+            'Automação de Testes': [
+                'Frameworks: Robot Framework, Selenium',
+                'Cobertura de testes E2E, integração e unidade'
+            ],
+            'Desenvolvedor Python': [
+                'Projetos com Django, FastAPI e Tkinter',
+                'APIs, automações, bots e scripts personalizados'
+            ],
+            'Criação de Sites Profissionais': [
+                'HTML, CSS, Bootstrap responsivos',
+                'Sites institucionais com boa performance'
+            ],
+            'Automação de Processos': [
+                'Eliminação de tarefas repetitivas com Python',
+                'Economia de tempo e redução de erros'
+            ],
+            'Sistemas Personalizados': [
+                'Desenvolvimento sob demanda',
+                'Soluções locais ou baseadas na web'
+            ],
+            'Cartões Digitais Interativos': [
+                'Links diretos, QRcode, compartilhamento rápido',
+                'Cartões responsivos e elegantes'
+            ],
+            'Mini-SaaS e Bots sob demanda': [
+                'Criação de ferramentas web independentes',
+                'Bots de atendimento, dashboards, notificações'
+            ],
+            'Serviços Extras': [
+                'Mentorias, integrações com Google Sheets, QRcode',
+                'Hospedagem, manutenção, e mais'
+            ]
+        };
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const titulo = card.querySelector('.info-projetos').textContent;
+                const descricao = card.querySelector('.paragrafo-projetos').textContent;
+                document.getElementById('modal-titulo').textContent = titulo;
+                document.getElementById('modal-descricao').textContent = descricao;
+
+                const detalhes = detalhesServicos[titulo] || [];
+                const ul = document.getElementById('modal-detalhes');
+                ul.innerHTML = '';
+                detalhes.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+
+                document.getElementById('modal-servico').style.display = 'flex';
+            });
+        });
+
+        // Fechar modal
+        function fecharModal() {
+            document.getElementById('modal-servico').style.display = 'none';
+        }
+    </script>
 
 </body>
-
 </html>

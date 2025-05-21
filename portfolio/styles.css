@@ -250,3 +250,46 @@ h1 {
         transform: translateY(-20px);
     }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex; /* Mantém o conteúdo centralizado */
+}
+
+.modal-conteudo {
+  background: var(--escuro);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  color: var(--claro);
+  position: relative;
+  border: 1px solid var(--vidro);
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.5);
+  text-align: left;
+}
+
+.modal .fechar {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  color: var(--claro);
+  cursor: pointer;
+}
+
+#modal-detalhes {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  list-style: disc;
+  color: var(--claro);
+}
