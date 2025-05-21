@@ -1113,5 +1113,76 @@ do {
 Vai imprimir de 1 a 5.
 
 
+9 - Laço for (Javascript)
+É semelhante mas com algumas diferenças de sintaxe ao python. Vamos ver no exemplo a seguir:
+for (var i = 0; i < 5; i++) { 
+    console.log(i);
+}
+E no python seria: 
+for i in range(0, 5):
+    print(i)
+
+
+10 - Arrays (Javascript)
+Os arrays são estruturas de dados que permitem armazenar uma coleção de valores em uma única variável.
+No javascript é um array que é um objeto e tem métodos e propriedades.
+Exemplo:
+var array = [1, 2, 3, 4, 5];
+console.log(array[0]); // imprime 1
+console.log(array[1]); // imprime 2
+Exemplo 2:
+var nome = Array("João", "Maria", "José");
+console.log(nome[0]); // imprime João
+console.log(nome[1]); // imprime Maria
+
+Usando python seria:
+array = [1, 2, 3, 4, 5]
+print(array[0]) # imprime 1
+print(array[1]) # imprime 2
+
+
+11 - Métodos de arrays (Javascript)
+Os métodos de arrays são funções que podem ser usadas para manipular os elementos de um array.
+Exemplo:
+var array = [1, 2, 3, 4, 5];
+array.push(6); // adiciona o elemento 6 ao final do array
+console.log(array); // imprime [1, 2, 3, 4, 5, 6]
+
+Podemos ainda ordenar o array com o método sort() e com o método reverse() podemos inverter o array.
+Podemos também ver o indice de cada um dos elementos do array com o método indexOf().
+
+
+12 - Funções e callbacks (Javascript)
+As funções são blocos de código que podem ser executados várias vezes.
+Exemplo:
+function soma(a, b) {
+    return a + b;
+    nsole.log(soma(1, 2)); // imprime 3
+}
+
+Podemos também passar uma função como parâmetro de outra função.
+Usado para quando uma função for sucesso ter uma resposta e outra função para quando a função falhar.
+Exemplo:
+function success(callback) {
+    callback();
+    console.log("Sucesso!");
+    function callback() {
+        console.log("Callback executado!");
+    }
+
+
+13 - EVENTOS MOUSE (Javascript)
+Os eventos de mouse são eventos que ocorrem quando o usuário interage com o mouse.
+Utilizando o onclick para executar uma função quando o usuário clicar em um elemento HTML.
+Tendo a função basta chamar o evento no HTML. 
+Como exemplo: <div id="meu-elemento" onclick="minhaFuncao()"> .... </div>
+Pode ser um alerta, um popup ou qualquer outra coisa que você queira executar quando o usuário clicar no elemento.
+Tem outro exemplo também que é o onsubmit que é um evento que ocorre quando o usuário envia um formulário.
+Outro onmouseout que é um evento que ocorre quando o usuário move o mouse para fora de um elemento HTML.
+HTML DOM -> DOM Event Objects -> E veja todos os eventos.
+
+
+14 - EVENTOS TECLADO (Javascript)
+Os eventos de teclado são eventos que ocorrem quando o usuário interage com o teclado.
 
 
