@@ -9,21 +9,14 @@
     <title>ARIEL FIUZA | PROFISSIONAL TI</title>
 
     <script>
-        var nome = "Ariel Fiuza";
-        var idade = 32;
-        var profissao = "Programador";
+        function somar() {
+        var n1 = document.getElementById("n1").value;
+        var n2 = document.getElementById("n2").value;
 
-        for (var i = 0; i < 10; i++) {
-            console.log(i);
-
-        }
-        var nome = Array("João", "Maria", "José");
-        console.log(nome[0]); // imprime João
-        console.log(nome[1]); // imprime Maria
-
-        var array = [1, 2, 3, 4, 5];
-        array.push(6); // adiciona o elemento 6 ao final do array
-        console.log(array); // imprime [1, 2, 3, 4, 5, 6]
+        var soma = parseFloat(n1) + parseFloat(n2); 
+        var resultadoMostrar = document.getElementById("resultado");
+        resultadoMostrar.innerHTML = "A soma é: " + soma;
+    }
     </script>
 </head>
 
@@ -61,8 +54,20 @@
         </div>
     </nav>
 
-    <div style="margin-top: 10px;" class="container">
-
+    <div style="text-align: center;" class="container">
+        <br>
+        <label for="">Numero 1</label>
+        <br>
+        <input type="number" id="n1">
+        <br>
+        <br>
+        <label for="">Numero 2</label>
+        <br>
+        <input type="number" id="n2">
+        <br>
+        <p id="resultado"></p>
+        <br>
+        <button onclick="somar()" class="btn btn-success">Enviar</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

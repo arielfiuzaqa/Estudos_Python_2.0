@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchForm.addEventListener('submit', async function(event) {
     event.preventDefault();
-    const inputValue = event.target[0].value.trim();
+
+    // Seleciona o input de forma mais segura
+    const input = event.target.querySelector('input[name="search"]');
+    const inputValue = input ? input.value.trim() : '';
 
     if (!inputValue) {
       productList.innerHTML = `<p style="color: orange;">Digite um termo para buscar.</p>`;
@@ -43,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="product-card">
         <img src="${product.thumbnail}" alt="${product.title}">
         <h3>${product.title}</h3>
-        <p>R$ ${product.price}</p>
-        <p>Loja: ${product.seller?.nickname || 'Desconhecida'}</p>
+        <p class="product-price">${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price)}</p>
+        <p class="product-store">Loja: ${product.seller?.nickname || 'Desconhecida'}</p>
       </div>
     `).join('');
   }

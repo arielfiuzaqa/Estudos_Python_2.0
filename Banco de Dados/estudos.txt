@@ -1184,5 +1184,42 @@ HTML DOM -> DOM Event Objects -> E veja todos os eventos.
 
 14 - EVENTOS TECLADO (Javascript)
 Os eventos de teclado são eventos que ocorrem quando o usuário interage com o teclado.
+Bom sempre olhar dentro do site para estudar os eventos.
+
+15 - EVENTOS JANELA (Javascript)
+Os eventos de janela são eventos que ocorrem quando o usuário interage com a janela do navegador.
+Como sempre, da uma olhada na documentação.
+
+16 - EVENTOS Formulários (Javascript)
+Os eventos de formulários são eventos que ocorrem quando o usuário interage com um formulário.
+Como sempre, da uma olhada na documentação.
+Preenche outro inputs automaticamente, tipo aqueles de preencher o cep e vir todo o resto.
+
+
+17 - DOM #1 CAPTURANDO E MODIFICANDO ELEMENTOS HTML (Javascript)
+O DOM (Document Object Model) é uma interface de programação para documentos HTML, XML e SVG.
+Ele representa a página de forma estruturada e permite que os programadores acessem e modifiquem o conteúdo,
+estrutura e estilo de uma página da web.
+O DOM é uma árvore de objetos que representa a estrutura de uma página da web.
+Cada elemento HTML é representado por um objeto DOM, e os elementos podem ser acessados e modificados
+através de métodos e propriedades do objeto DOM correspondente.
+
+Adicionamos uma div com um id e um parágrafo com um id também. Para trabalhar o "topo" da página.
+Apredemos a mexer nas propriedade dos elementos DOM através do console do navegador e também usando o método
+getElementById() para pegar o elemento pelo id. E outros semelhantes assim como colocar um elemento como variavel
+var div = document.getElementById("div"); etc e manipula-la através disso.
+
+
+18 - DOM #2 Capturando valores de INPUT (Javascript)
+Podemos capturar o valor de um input com o método value.
+Criamos uma certos DOM para fazer alguns testes de inputs e botões.
+Vamos criar para que se soma dois numeros e se traga a resposta desses mesmos numeros mas apertando um botão
+que vai ser tudo em js. Criamos uma soma simples incluindo mudanças de cor conforme os valores e condições.
+
+
+19 - DOM #3 WINDOW (Javascript)
+movimentos da tela, criando funções que podem ajudar nas dinamicas da página.
+
+
 
 
