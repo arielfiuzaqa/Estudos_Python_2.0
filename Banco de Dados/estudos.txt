@@ -1222,4 +1222,30 @@ movimentos da tela, criando funções que podem ajudar nas dinamicas da página.
 
 
 
+AJAX + FAST API | PROJETO - POKEDEX
+1 - AJAX 1 (CRIANDO UMA POKEDEX)
+AJAX é uma técnica de desenvolvimento web que permite a criação de aplicações web dinâmicas e interativas
+sem a necessidade de recarregar a página inteira.
+Ele permite que o navegador faça requisições assíncronas para o servidor, sem a necessidade de recarregar a página.
+Isso permite que o usuário interaja com a página sem que a página inteira seja recarregada.
+E usando nossa fastapi para o backend.
+
+E nesse projeto vamos usar a pokeapi que é uma API pública que fornece dados sobre os Pokémon.
+Iniciando colocando as primeiras requisições para a API e mostrando os resultados.
+
+Montamos a primeira parte assim, trás as imagens mas esta ocorrendo algum problema que vamos descobrir qual.
+
+
+2 - AJAX 2 ASYNC (criando uma pokedex)
+Conseguimos ajustar o erro que estava ocorrendo e montamos uma forma de trazer vários valores dos pokemons
+suas imagens e seus nomes. Adicionamos um botão para saber mais onde vamos configurar as infomrmações que
+queremos trazer dele.
+
+
+3 - CADASTRO DE USUÁRIO COM AJAX E FAST API (AJAX)
+Vamos criar um cadastro de usuário com AJAX e Fast API.
+Vamos criar um formulário para cadastro de usuário e vamos usar AJAX para enviar os dados do formulário para o servidor.
+Agora vamos fazer um projeto fácil de ser feito mas não tão simples, mas que vai nos mostrar o quão bom estamos ficando 
+dentro da nossa programação.
+
 
