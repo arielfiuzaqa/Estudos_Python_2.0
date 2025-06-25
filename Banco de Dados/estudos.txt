@@ -1222,7 +1222,7 @@ movimentos da tela, criando funções que podem ajudar nas dinamicas da página.
 
 
 
-AJAX + FAST API | PROJETO - POKEDEX
+AJAX + FAST API | PROJETO - POKEDEX | https://pokeapi.co/
 1 - AJAX 1 (CRIANDO UMA POKEDEX)
 AJAX é uma técnica de desenvolvimento web que permite a criação de aplicações web dinâmicas e interativas
 sem a necessidade de recarregar a página inteira.
@@ -1247,5 +1247,7 @@ Vamos criar um cadastro de usuário com AJAX e Fast API.
 Vamos criar um formulário para cadastro de usuário e vamos usar AJAX para enviar os dados do formulário para o servidor.
 Agora vamos fazer um projeto fácil de ser feito mas não tão simples, mas que vai nos mostrar o quão bom estamos ficando 
 dentro da nossa programação.
+
+
 
 
