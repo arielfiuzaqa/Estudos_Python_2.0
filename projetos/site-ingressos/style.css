@@ -1,0 +1,626 @@
+/* Importação de fontes (opcional, mas recomendado para um visual moderno) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variáveis CSS para cores e espaçamentos */
+:root {
+    --primary-color: #E20074; /* Cor principal, similar ao Eventim */
+    --secondary-color: #007bff; /* Azul para botões secundários ou links */
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-light: #f8f8f8;
+    --background-dark: #222;
+    --white: #fff;
+    --border-color: #eee;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --max-width-content: 1200px;
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #c90066; /* Tom mais escuro da primary-color */
+    text-decoration: none;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Tom mais escuro da secondary-color */
+    text-decoration: none;
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--white);
+    padding: var(--spacing-md) 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header .nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.header .nav a {
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header .nav a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header .user-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.header .user-actions a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.header .user-actions a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header .user-actions .fa-search,
+.header .user-actions .fa-user {
+    font-size: 1.1em;
+}
+
+
+/* --- Hero Banner (Home Page) --- */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500/333/fff?text=Banner+Evento') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg) 0 60px 0;
+    height: 450px; /* Altura fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-banner h1 {
+    font-size: 3.5em;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-banner p {
+    font-size: 1.2em;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.search-bar {
+    display: flex;
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 0 50px 50px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #c90066;
+}
+
+.search-bar button .fas {
+    margin-right: 5px;
+}
+
+/* --- Eventos em Destaque (Home Page) --- */
+.events-list {
+    padding: var(--spacing-lg) 0;
+}
+
+.events-list h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.event-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card .event-info {
+    padding: var(--spacing-md);
+}
+
+.event-card .event-info h3 {
+    font-size: 1.4em;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.event-card .event-info p {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.event-card .event-info .event-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-top: var(--spacing-sm);
+}
+
+.event-card .btn-secondary {
+    margin-top: var(--spacing-sm);
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--background-dark);
+    color: var(--white);
+    padding: var(--spacing-lg) 0 var(--spacing-md) 0;
+    font-size: 0.9em;
+}
+
+.footer .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer .footer-col h4 {
+    font-size: 1.2em;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.footer .footer-col ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer .footer-col a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.footer .footer-col a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer .social-media a {
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.5em;
+    margin-right: var(--spacing-sm);
+    transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+    color: var(--primary-color);
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    opacity: 0.8;
+}
+
+/* --- Página de Detalhes do Evento --- */
+.event-details-page {
+    padding: var(--spacing-lg) 0;
+}
+
+.event-details-page .back-link {
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    color: var(--light-text-color);
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.event-details-page .back-link:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.event-main-info {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+}
+
+.event-image-section {
+    flex: 1;
+    min-width: 300px; /* Garante que a imagem não fique muito pequena */
+}
+
+.event-image-section img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.event-info-section {
+    flex: 1.5; /* Ocupa mais espaço que a imagem */
+    min-width: 350px;
+}
+
+.event-info-section h1 {
+    font-size: 2.5em;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.event-info-section .event-category {
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.event-info-section p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-info-section .price-highlight {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.buy-tickets-section {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: var(--spacing-lg);
+}
+
+.buy-tickets-section h3 {
+    font-size: 1.5em;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.ticket-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ticket-type:last-of-type {
+    border-bottom: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.ticket-description h4 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.ticket-description p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+}
+
+.ticket-description .ticket-price {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+.ticket-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ticket-quantity button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-quantity button:hover {
+    background-color: #0056b3;
+}
+
+.ticket-quantity input[type="number"] {
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 5px;
+    -moz-appearance: textfield; /* Remove setas em Firefox */
+}
+
+/* Remove setas em Chrome, Safari, Edge, Opera */
+.ticket-quantity input::-webkit-outer-spin-button,
+.ticket-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.add-to-cart-btn {
+    width: 100%;
+    font-size: 1.2em;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.event-description-section,
+.event-location-map {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: var(--spacing-lg);
+}
+
+.event-description-section h2,
+.event-location-map h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.event-description-section p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.event-description-section ul {
+    list-style-type: disc;
+    margin-left: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    color: var(--light-text-color);
+}
+
+.event-description-section ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.event-location-map .map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o iframe ou imagem de mapa se ajuste */
+    margin-bottom: var(--spacing-md);
+}
+
+.event-location-map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 992px) {
+    .header .nav {
+        display: none; /* Em telas menores, o menu de navegação pode ser oculto e substituído por um menu hambúrguer com JS */
+    }
+
+    .header .user-actions {
+        gap: var(--spacing-sm);
+    }
+
+    .header .user-actions .btn-primary {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-banner p {
+        font-size: 1em;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .event-main-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-image-section,
+    .event-info-section {
+        min-width: unset; /* Remove a largura mínima para telas pequenas */
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .footer-columns {
+        grid-template-columns: 1fr 1fr; /* Duas colunas em telas menores */
+        text-align: center;
+    }
+
+    .footer .footer-col ul {
+        padding: 0;
+    }
+
+    .footer .social-media {
+        text-align: center;
+        margin-top: var(--spacing-md);
+    }
+}
+
+@media (max-width: 576px) {
+    .header .logo a {
+        font-size: 1.5em;
+    }
+
+    .header .user-actions .btn-primary {
+        display: none; /* Oculta o botão "Vender Ingressos" em telas muito pequenas */
+    }
+
+    .search-bar input {
+        padding: 8px 10px;
+    }
+
+    .search-bar button {
+        padding: 8px 10px;
+    }
+
+    .events-list h2,
+    .event-info-section h1,
+    .event-description-section h2,
+    .event-location-map h2 {
+        font-size: 2em;
+    }
+
+    .event-card .event-info h3 {
+        font-size: 1.2em;
+    }
+}

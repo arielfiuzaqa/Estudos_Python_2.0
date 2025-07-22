@@ -1169,7 +1169,7 @@ function success(callback) {
     function callback() {
         console.log("Callback executado!");
     }
-
+}
 
 13 - EVENTOS MOUSE (Javascript)
 Os eventos de mouse são eventos que ocorrem quando o usuário interage com o mouse.
